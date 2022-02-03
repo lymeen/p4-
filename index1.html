@@ -1,0 +1,25 @@
+<html>
+<body>
+<h1 style="color: blue;">
+</h1>
+<h3>
+</h3>
+
+<script>
+    let today = new Date();
+    let gradYear = today.getFullYear();
+    if (today.getMonth() == 9 &&
+        today.getDate() > 25) {
+    gradYear = gradYear + 1;
+    }
+    let gradDate =
+        new Date(gradYear, 9, 25);
+    let dayMilliseconds = 1000 * 60 * 60 * 24;
+    let remainingDays = Math.ceil(
+    (gradDate.getTime() - today.getTime()) /
+    (dayMilliseconds)
+    );
+    document.write("Ewww! It's coming soon: " + remainingDays );
+</script>
+</body>
+</html>
